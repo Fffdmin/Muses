@@ -1,0 +1,35 @@
+{
+    "homepage": "https://github.com/sandboxie-plus/Sandboxie",
+    "description": "Sandboxie is sandbox-based isolation software for 32- and 64-bit Windows NT-based operating systems. It was developed by Sophos (which acquired it from Invincea, which acquired it earlier from the original author Ronen Tzur). It creates a sandbox-like isolated operating environment in which applications can be run or installed without permanently modifying the local or mapped drive. An isolated virtual environment allows controlled testing of untrusted programs and web surfing.",
+    "version": "1.1.7.8",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/huiyadanli/PasteEx/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v0.3.5/SbiePlus64-v0.3.5.zip",
+        },
+        "32bit": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v0.3.5/SbiePlus32-v0.3.5.zip",
+        }
+    },
+    "bin": "SbiePlus64\\SbieCtrl.exe",
+    "persist": [
+        "SbiePlus64\\User"
+    ],
+    "shortcuts": [
+        [
+            "SbiePlus64\\PasteEx.exe",
+            "SbiePlus64"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/SbiePlus64-v$version.zip#/dl.7z"
+    },
+    "notes": [
+        "Please open app for initialization."
+    ]
+}
+
