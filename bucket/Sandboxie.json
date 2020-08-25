@@ -1,21 +1,42 @@
 {
-    "homepage": "https://github.com/sandboxie-plus/Sandboxie",
-    "description": "Sandboxie is sandbox-based isolation software for 32- and 64-bit Windows NT-based operating systems. It was developed by Sophos (which acquired it from Invincea, which acquired it earlier from the original author Ronen Tzur). It creates a sandbox-like isolated operating environment in which applications can be run or installed without permanently modifying the local or mapped drive. An isolated virtual environment allows controlled testing of untrusted programs and web surfing.",
-    "version": "0.3.5",
-    "license": "GPL-3.0 License",
+    "version": "0.4.4",
+    "description": "Vim-fork focused on extensibility and usability",
+    "homepage": "https://neovim.io/",
+    "license": {
+        "identifier": "Apache-2.0,Vim",
+        "url": "https://github.com/neovim/neovim/blob/master/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v0.3.5/SbiePlus64-v0.3.5.zip",
+            "url": "https://github.com/neovim/neovim/releases/download/v0.4.4/nvim-win64.zip",
+            "hash": "4b88daae8427624f82abb10eb6e527f4b0c600e83aaa9a0857d06106b445bbd3"
         },
         "32bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v0.3.5/SbiePlus32-v0.3.5.zip",
+            "url": "https://github.com/neovim/neovim/releases/download/v0.4.4/nvim-win32.zip",
+            "hash": "2b8011cbe4a4028d8fddfecf555b5a66d05ad34d36e242ff26b418ddf33b323f"
         }
     },
-    "bin": "Start.exe",
+    "extract_dir": "Sandboxie",
+    "bin": [
+        "SbieCtrl",
+    ],
     "shortcuts": [
         [
-            "Start.exe",
+            "SbieCtrl",
             "Sandboxie"
         ]
-    ]
+    ],
+    "checkver": {
+        "github": "https://github.com/sandboxie-plus/Sandboxie"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "hhttps://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/SbiePlus64-v$version.zip"
+            },
+            "32bit": {
+                "url": "hhttps://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/SbiePlus62-v$version.zip"
+            }
+        }
+    }
 }
